@@ -65,3 +65,14 @@ The setup that works well for me is to have 3 terminal windows opened- one with 
 ### You're done!
 
 Stop the filter server: `vagrant halt filter1` and you're all done!
+
+#### Note: Testing on browsers
+
+To test the rollout on your browser, you can follow the instruction for [testing notifications](https://github.com/ursakacar/scribbles/blob/main/testing-notes/notifications.md). The url will therefore be:`defaults.notificationurl = "https://notification.local/notification.json";`
+
+After installing the extension, check what version got installed. With this, you know when to expect the notification to be triggered on your browser.
+
+To check your version, open the extension background page and click on the notification request -> network tab -> Preview. Here, you can see what version of extension you got (e.g 9/1 or 9/4 or 9/7 etc)
+
+
+So now that you know your version, when you apply the patch that adds the notification to your version, check that the notification is really triggered
